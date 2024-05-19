@@ -83,13 +83,14 @@ section {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px #fffffff8;
-    background-image: url(https://images.unsplash.com/photo-1579546928686-286c9fbde1ec?q=80&w=1539&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+    background-image: url(https://png.pngtree.com/background/20220810/original/pngtree-pramuka-background-design-vector-png-camp-wallpaper-picture-image_1915406.jpg)
 }
 
 .image-section {
     display: flex;
     justify-content: center;
     align-items: center;
+    size: fixed;
 } 
 
 .image-section img {
@@ -133,6 +134,7 @@ marquee {
 
 section p {
     font-size: 40px;
+    color: rgb(0, 0, 0);
 }
 
 /* Footer styles */
