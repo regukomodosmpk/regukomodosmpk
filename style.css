@@ -120,7 +120,7 @@ section h2 {
 }
 
 section i {
-    font-size: 5em;
+    font-size: 5%;
     margin-bottom: 30px;
     color: red;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -132,9 +132,43 @@ marquee {
     background-color: #ffefef;
 }
 
+section h5 {
+    color: black;
+    margin-bottom: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 section p {
     font-size: 40px;
     color: rgb(0, 0, 0);
+}
+
+section a {
+    font-size: 18px;
+    color:wheat;
+}
+
+button {
+    color: black;
+    background: black;
+    color: #f0f0f0;
+    padding: 8px 20px;
+    border: 1px solid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.besar {
+    line-height: 80px;
+}
+
+.box {
+    color: black;
+    margin-bottom: 30px;
+}
+
+.box1 {
+    color: black;
+    margin-bottom: 40px;
 }
 
 /* Footer styles */
