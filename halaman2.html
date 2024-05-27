@@ -84,9 +84,23 @@
                 alt="Placeholder Image"
             />
         </section>
+        <section class="upload-section">
+            <h2>Upload an Image</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <button type="button" type="submit" class="btn-warning">Unggah dari galeri
+                <input type="file" id="imageUpload" accept="image/*" required>
+                <button type="submit">Posting</button>
+                </button>
+            </form>
+        </section>
+        <section class="gallery-section">
+            <h2>Galeri umum</h2>
+            <div id="imageGallery" class="image-gallery">
+                <!-- Images will be displayed here -->
+            </div>
+        </section>
     </main>
     <section href="halaman2.html">
-        <p></p>
         <audio autoplay src="pramuka.mp3"></audio>
     </section>
     <footer>
@@ -94,5 +108,7 @@
         <p>email: yoannormal08367@gmail.com</p>
         <p>&copy; 2024 Regu Komodo.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
