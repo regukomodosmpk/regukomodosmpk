@@ -114,6 +114,11 @@ section:nth-child(even) {
     background-color: #ffffff;
 }
 
+section h4 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
 section h2 {
     font-size: 4em;
     margin-bottom: 20px;
@@ -260,6 +265,53 @@ button:hover {
     max-width: 200px;
     max-height: 200px;
     border: 1px solid #ccc;
+}
+
+.countdown-container {
+    text-align: center;
+}
+
+.countdown {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.countdown-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 100px;
+    margin: 10px;
+}
+
+.countdown-element span {
+    font-size: 5rem;
+}
+
+.label {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: rgb(88, 65, 223);
+}
+
+@media (max-width: 600px) {
+    .countdown-element span {
+        font-size: 2.2rem;
+    }
+    .label {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .countdown-element span {
+        font-size: 1.25rem;
+    }
+    .label {
+        font-size: 0.5rem;
+    }
 }
 
 
