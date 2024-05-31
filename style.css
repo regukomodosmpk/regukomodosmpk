@@ -160,6 +160,7 @@ section a {
 
 /* Style Button */
 .button-custom {
+    padding: 2rem 3rem;
     display: inline-block;
     background: #4285F4;
     color: #fff;
@@ -243,11 +244,22 @@ form input[type="file"] {
 }
 
 button {
-    padding: 0.5rem 1rem;
+    padding: 1rem 5rem;
     background-color: #333;
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 50px;
+}
+
+button1 {
+    padding: 1.5rem 6rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: ;
 }
 
 button:hover {
