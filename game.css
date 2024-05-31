@@ -1,0 +1,154 @@
+/* Basic reset and font settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1549982150-1129eb6aa6d3?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+/* Header styles */
+header {
+    background-color: #7376ff;
+    color: rgb(255, 255, 255);
+    padding: 1em 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.game-container {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#clickButton {
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#timeLeft, #score {
+    font-weight: bold;
+}
+
+  h2 .white-text {
+    color: rgb(255, 255, 255);
+  }
+
+  .countdown-container {
+    text-align: center;
+}
+
+.countdown {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.countdown-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 100px;
+    margin: 10px;
+}
+
+.countdown-element span {
+    font-size: 2rem;
+}
+
+.label {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: #aaa;
+}
+
+@media (max-width: 600px) {
+    .countdown-element span {
+        font-size: 1.5rem;
+    }
+    .label {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .countdown-element span {
+        font-size: 1.25rem;
+    }
+    .label {
+        font-size: 0.5rem;
+    }
+}
+
+.secition {
+    background-color: #333;
+}
+
+/* Section styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    font-family: fantasy;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #fffffff8;
+    background-image: url(https://png.pngtree.com/background/20220810/original/pngtree-pramuka-background-design-vector-png-camp-wallpaper-picture-image_1915406.jpg)
+}
+
+/* Reset CSS untuk menghindari masalah default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Footer styles */
+footer {
+    background-color: #1a73d8;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1em 0;
+    margin-top: auto;
+}
