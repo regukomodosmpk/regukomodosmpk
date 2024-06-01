@@ -7,9 +7,9 @@ let currentPlayer = "X";
 
 let gameState = ["", "", "", "", "", "", "", "", ""];
 
-const winningMessage = () => `Player ${currentPlayer} has won!`;
-const drawMessage = () => `Game ended in a draw!`;
-const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
+const winningMessage = () => `Player ${currentPlayer} Menang!`;
+const drawMessage = () => `Kamu dan Aku Seri`;
+const currentPlayerTurn = () => `saatnya ${currentPlayer}`;
 
 statusDisplay.innerHTML = currentPlayerTurn();
 

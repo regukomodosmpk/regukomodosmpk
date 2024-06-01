@@ -96,3 +96,6 @@ footer {
     margin-top: auto;
     position: relative;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
