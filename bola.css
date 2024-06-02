@@ -15,20 +15,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-button1 {
-    padding: 0.5rem 6rem;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 50px;
-    margin-top: 22 ;
-}
-
-button:hover {
-    background-color: #555;
+    max-width: 200px; /* Atur lebar maksimum kontainer */
+    width: 90%; /* Gunakan persentase lebar agar kontainer responsif */
 }
 
 button {
@@ -37,4 +25,21 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Tambahkan media queries untuk tata letak responsif */
+@media screen and (max-width: 200px) {
+    /* Atur tata letak untuk layar berukuran kecil */
+    #game-container {
+        padding: 10px;
+    }
+    
+    button {
+        width: 100%; /* Gunakan lebar penuh untuk tombol pada layar kecil */
+    }
 }
