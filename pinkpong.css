@@ -1,67 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 :root {
     box-sizing: border-box;
-  }
-  
-  html,
-  body,
-  * {
+}
+
+html,
+body,
+* {
     margin: 0;
     padding: 0;
-  }
-  
-  #app {
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+#app {
     height: 100vh;
-  }
-  
-  .summary {
+}
+
+.summary {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
     border: 3px solid blanchedalmond;
-    width: 400px;
-    height: 400px;
+    width: 90%;
+    height: auto;
+    padding: 20px;
     text-align: center;
-  }
-  
-  .games {
+}
+
+.games {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .option {
-    width: 30%;
-    margin: 10px 15px;
-    padding: 25px;
+    flex-wrap: wrap;
+}
+
+.option {
+    width: 90%;
+    margin: 10px 0;
+    padding: 15px;
     text-align: center;
-    font-size: 40px;
+    font-size: 20px;
     background-color: bisque;
-  }
-  
-  .option:hover {
+}
+
+.option:hover {
     cursor: pointer;
     background-color: burlywood;
     transition: cubic-bezier(0.215, 0.61, 0.355, 1) ease-in-out;
     transform: scale(105%);
-    -webkit-transform: scale(105%);
-    -moz-transform: scale(105%);
-    -ms-transform: scale(105%);
-    -o-transform: scale(105%);
-    -webkit-transition: cubic-bezier(0.215, 0.61, 0.355, 1) ease-in-out;
-    -moz-transition: cubic-bezier(0.215, 0.61, 0.355, 1) ease-in-out;
-    -ms-transition: cubic-bezier(0.215, 0.61, 0.355, 1) ease-in-out;
-    -o-transition: cubic-bezier(0.215, 0.61, 0.355, 1) ease-in-out;
-  }
+}
 
-  button {
-    padding: 0.5rem 10rem;
+button {
+    padding: 0.5rem 2rem;
     background-color: #ff0000;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 50px;
+    margin-top: 10px;
 }
 
 /* Footer styles */
@@ -72,4 +73,23 @@ footer {
     padding: 1em 0;
     margin-top: auto;
     position: relative;
+}
+
+/* Responsive styles */
+@media (max-width: 200px) {
+    .summary {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .option {
+        width: 100%;
+        margin: 5px 0;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+    }
 }
