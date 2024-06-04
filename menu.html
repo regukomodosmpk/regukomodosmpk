@@ -100,11 +100,36 @@
                 </ul>
             </div>
         </section>
+         <!-- Scroll to top button -->
+         <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">⇧</button>
         <footer>
             <p>kontak: 0895-3006-7456</p>
             <p>email: yoannormal08367@gmail.com</p>
             <p>&copy; 2024 Regu Komodo.</p>
         </footer>
     <script src="jam.js"></script>
+    <script>
+          // Get the button
+let mybutton = document.getElementById("scrollToTopBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.classList.add("show");
+    } else {
+        mybutton.classList.remove("show");
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scroll
+    });
+}
+    </script>
 </body>
 </html>
