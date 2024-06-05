@@ -11,30 +11,35 @@
            <button1><li><a href="menu.html">Kembali Ke Halaman Menu Game</a></li></button1>
         </ul>
     </nav>
-<body>
-    <div id="game-container">
-        <h1>Tes Logika</h1>
-        <div id="question-container">
-            <p id="question">Pertanyaan akan muncul di sini</p>
-        </div>
-        <div id="answer-buttons">
-            <button class="answer-button">Jawaban 1</button>
-            <button class="answer-button">Jawaban 2</button>
-            <button class="answer-button">Jawaban 3</button>
-            <button class="answer-button">Jawaban 4</button>
-        </div>
-        <div id="question-container">
-            <div id="question"></div>
-            <div id="answer-buttons"></div>
-            <div id="explanation" style="display: none;"></div>
-            <button id="next-button" style="display: none;" onclick="nextQuestion()">Next</button>
-        </div>
-        <div id="zoom-controls">
+    <body>
+    <header class="header">
+        <h1>CBT AKM</h1>
+        <p>Regu Komodo</p>
+        <div class="zoom-buttons">
             <button onclick="zoomIn()">Zoom In</button>
             <button onclick="zoomOut()">Zoom Out</button>
-        </div>     
-    </div>
-    <audio autoplay src="nonajelita.mp3"></audio>
+        </div>
+    </header>
+    <main class="main-content">
+        <div id="question-container" class="question-container">
+            <div id="question" class="question"></div>
+            <div id="answer-buttons" class="answer-buttons"></div>
+            <div id="explanation" class="explanation"></div>
+        </div>
+        <div id="sidebar" class="sidebar">
+            <h2></h2>
+            <ul id="question-list" class="question-list"></ul>
+        </div>
+    </main>
+    <footer class="footer">
+        <button id="back-button" class="navigation-button" onclick="previousQuestion()">Kembali</button>
+        <button id="next-button" class="navigation-button" onclick="nextQuestion()">Selanjutnya</button>
+        <button id="submit-button" class="navigation-button" onclick="submitTest()">Selesai</button>
+    </footer>
+    <audio autoplay>
+        <source src="http://d.top4top.io/m_3061eisr31.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
     <script src="logika.js"></script>
 </body>
 </html>

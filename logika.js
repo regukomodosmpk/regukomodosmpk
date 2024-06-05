@@ -189,12 +189,15 @@ const questions = [
 
 let currentQuestionIndex = 0;
 let zoomLevel = 1;
+let score = 0;
+let answeredQuestions = new Array(questions.length).fill(false);
 
 function showQuestion() {
     const questionElement = document.getElementById('question');
     const answerButtons = document.getElementById('answer-buttons');
     const explanationElement = document.getElementById('explanation');
     const nextButton = document.getElementById('next-button');
+    const submitButton = document.getElementById('submit-button');
 
     const currentQuestion = questions[currentQuestionIndex];
     questionElement.innerText = currentQuestion.question;
@@ -206,25 +209,52 @@ function showQuestion() {
     explanationElement.style.display = 'none';
     explanationElement.innerText = '';
     nextButton.style.display = 'none';
+    submitButton.style.display = 'none';
 
     currentQuestion.answers.forEach((answer, index) => {
         const button = document.createElement('button');
         button.innerText = answer;
         button.classList.add('answer-button');
+        button.disabled = answeredQuestions[currentQuestionIndex];
         button.addEventListener('click', () => selectAnswer(index, currentQuestion.correct));
         answerButtons.appendChild(button);
     });
+
+    // Tampilkan penjelasan dan jawaban yang telah dijawab jika tersedia
+    if (answeredQuestions[currentQuestionIndex]) {
+        if (currentQuestion.explanation) {
+            explanationElement.innerText = currentQuestion.explanation;
+            explanationElement.style.display = 'block';
+        }
+        Array.from(answerButtons.children).forEach((btn, index) => {
+            if (index === currentQuestion.correct) {
+                btn.classList.add('correct-answer');
+            }
+            if (index !== currentQuestion.correct && index === currentQuestion.answers.indexOf(currentQuestion.answers[currentQuestion.correct])) {
+                btn.classList.add('incorrect-answer');
+            }
+        });
+    }
 }
 
 function selectAnswer(selectedIndex, correctIndex) {
     const explanationElement = document.getElementById('explanation');
     const nextButton = document.getElementById('next-button');
+    const answerButtons = document.getElementById('answer-buttons');
+
+    answeredQuestions[currentQuestionIndex] = true;
 
     if (selectedIndex === correctIndex) {
+        score++;
         alert('Jawaban benar!');
     } else {
         alert('Jawaban salah!');
     }
+
+    // Nonaktifkan semua tombol jawaban
+    Array.from(answerButtons.children).forEach(btn => {
+        btn.disabled = true;
+    });
 
     // Tampilkan penjelasan
     const currentQuestion = questions[currentQuestionIndex];
@@ -233,7 +263,12 @@ function selectAnswer(selectedIndex, correctIndex) {
         explanationElement.style.display = 'block';
     }
 
-    nextButton.style.display = 'block';
+    if (currentQuestionIndex < questions.length - 1) {
+        nextButton.style.display = 'block';
+    } else {
+        const submitButton = document.getElementById('submit-button');
+        submitButton.style.display = 'block';
+    }
 }
 
 function nextQuestion() {
@@ -247,6 +282,10 @@ function nextQuestion() {
     }
 }
 
+function submitTest() {
+    alert(`Skor Anda: ${score}/${questions.length}`);
+}
+
 function zoomIn() {
     zoomLevel += 0.1;
     document.getElementById('question-container').style.transform = `scale(${zoomLevel})`;
@@ -258,3 +297,4 @@ function zoomOut() {
 }
 
 showQuestion();
+
